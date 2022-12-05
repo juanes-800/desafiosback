@@ -1,0 +1,19 @@
+{
+  "name": "desafiosback",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanes-800/desafiosback.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanes-800/desafiosback/issues"
+  },
+  "homepage": "https://github.com/juanes-800/desafiosback#readme"
+}
