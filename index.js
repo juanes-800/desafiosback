@@ -5,23 +5,30 @@ class ProductManager{
   }
 
   addProduct(producto){
-    this.products.find(element =>{
-      if(element.code === producto.code){
-        console.log('no se puede agregar producto')
-      }else{
-        this.products.push(producto)
-      }
-    })
+    if(this.products.find(element => element.code === producto.code)){
+      throw new Error('ya existe')
+    }
+    this.products.push(producto)
   }
+    
 
   getProducts(){
     return this.products
   }
+  getProductByID(id){
+    if(this.products.find(element => element.id === id)){
+      console.log(this.products[id])
+    } else{
+      throw new Error('not found')
+
+    }
+  }
+
 
   
 }
 class Product{
-  static  countProduct = 1;
+  static  countProduct = 0;
   constructor(title, description, price, thumbanail, code, stock){
     this.id = Product.countProduct++
     this.title = title;
@@ -33,12 +40,27 @@ class Product{
   }
  
 }
-let producto1 = new Product('Pantalon', 'rojo', 50000, 'img', 123, 20);
+
 let persona1 = new ProductManager('juan');
 
-persona1.addProduct(producto1)
-persona1.getProducts()
-console.log(persona1.getProducts());
+let producto0 = new Product('Pantalon', 'azul', 50000, 'img', 123, 10);
+let producto1 = new Product('camisa', ' negra', 20000, 'img', 124, 19);
+let producto2 = new Product('medias', 'blanca', 50000, 'img', 12, 8);
+let producto3 = new Product('gorra', 'verde', 25000, 'img',12, 6 )
+
+
+persona1.addProduct(producto0);
+persona1.addProduct(producto1);
+persona1.addProduct(producto2);
+// error ya existe el code 
+// persona1.addProduct(producto3);        
+
+// Mostrar productos
+// console.log(persona1.getProducts());
+
+// Buscar producto
+// persona1.getProductByID()
+
 
 
 
