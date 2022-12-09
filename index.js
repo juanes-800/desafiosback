@@ -13,6 +13,14 @@ class ProductManager{
       
     });
   }
+  getProducts(){
+    let getProduct = '';
+    for(let producto of this.products){
+      getProducts += producto + ' ';
+    }
+     console.log(getProduct); 
+  }
+
   
 }
 class Product{
