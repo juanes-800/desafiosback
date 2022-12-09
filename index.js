@@ -3,22 +3,19 @@ class ProductManager{
     this.nombre = nombre;
     this.products = [];
   }
+
   addProduct(producto){
-    this.products.forEach( (item) => {
-      if(!item.code === producto.code){
-         this.products.push(producto); 
-      }else{
+    this.products.find(element =>{
+      if(element.code === producto.code){
         console.log('no se puede agregar producto')
+      }else{
+        this.products.push(producto)
       }
-      
-    });
+    })
   }
+
   getProducts(){
-    let getProduct = '';
-    for(let producto of this.products){
-      getProducts += producto + ' ';
-    }
-     console.log(getProduct); 
+    return this.products
   }
 
   
@@ -36,11 +33,17 @@ class Product{
   }
  
 }
-let producto = new Product('Pantalon', 'rojo', 50000, 'img', 123, 20);
+let producto1 = new Product('Pantalon', 'rojo', 50000, 'img', 123, 20);
 let persona1 = new ProductManager('juan');
 
+persona1.addProduct(producto1)
+persona1.getProducts()
+console.log(persona1.getProducts());
 
-persona1.addProduct(producto); 
+
+
+
+
 
 
 
