@@ -5,7 +5,7 @@ class ProductManager{
   }
   addProduct(producto){
     this.products.forEach( (item) => {
-      if(item.code === producto.code){
+      if(!item.code === producto.code){
          this.products.push(producto); 
       }else{
         console.log('no se puede agregar producto')
