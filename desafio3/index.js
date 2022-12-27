@@ -16,7 +16,6 @@ class ProductManager {
   }
 
   addProduct(product) {
-
     if (this.products.find((item) => item.code === product.code)) {
       throw new Error("ya existe");
     } else if (
@@ -60,16 +59,13 @@ class ProductManager {
     console.log("No se encuentra producto  para eliminar con  ese id");
   }
 
-  updateProduct(id, updatedProduct) {   
-
+  updateProduct(id, updatedProduct) {
     let products = this.readFile();
 
-    let product = products.find(product => product.id === id);
-    
+    let product = products.find((product) => product.id === id);
+
     if (!product) {
-
-      return console.log('Error');;
-
+      return console.log("Error");
     }
 
     Object.assign(product, updatedProduct);
@@ -98,9 +94,11 @@ let producto2 = new Product("medias", "blanca", 50000, "img", 12, 8);
 let producto3 = new Product("zapato", "blancas", 50000, "img", 1, 3);
 
 // 1
-// persona1.addProduct(producto1);
-// persona1.addProduct(producto2);
-// persona1.addProduct(producto3);
+
+persona1.addProduct(producto0);
+persona1.addProduct(producto1);
+persona1.addProduct(producto2);
+persona1.addProduct(producto3);
 
 //2
 // error ya existe el code
@@ -120,12 +118,12 @@ let producto3 = new Product("zapato", "blancas", 50000, "img", 1, 3);
 
 //6
 // actualizar id
-persona1.updateProduct(1,{
-    id: 1,
-    title: 'cambiando',
-    description: ' rojo',
-    price: 20000,
-    thumbanail: 'img',
-    code: 124,
-    stock: 19456
-})
+// persona1.updateProduct(1,{
+//     id: 1,
+//     title: 'cambiando',
+//     description: ' rojo',
+//     price: 20000,
+//     thumbanail: 'img',
+//     code: 124,
+//     stock: 19456
+// })
