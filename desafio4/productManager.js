@@ -75,7 +75,7 @@ class ProductManager {
 }
 
 class Product {
-  static countProduct = 0;
+  static countProduct = 1;
   constructor(title, description, price, thumbanail, code, stock) {
     this.id = Product.countProduct++;
     this.title = title;
@@ -115,6 +115,7 @@ let producto9 = new Product("Te relaxnat", "te", 14800, "https://cdn.shopify.com
 // productList.addProduct(producto0);
 // productList.addProduct(producto1);
 // productList.addProduct(producto2);
+// productList.addProduct(producto3);
 // productList.addProduct(producto4);
 // productList.addProduct(producto5);
 // productList.addProduct(producto6);
