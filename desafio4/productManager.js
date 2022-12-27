@@ -87,18 +87,41 @@ class Product {
   }
 }
 
-let persona1 = new ProductManager("data.json");
-let producto0 = new Product("Pantalon", "azul", 50000, "img", 123, 10);
-let producto1 = new Product("camisa", " negra", 20000, "img", 124, 19);
-let producto2 = new Product("medias", "blanca", 50000, "img", 12, 8);
-let producto3 = new Product("zapato", "blancas", 50000, "img", 1, 3);
+let productList = new ProductManager("data.json");
+
+let producto0 = new Product("Amalaki", "vitamina",20000,"https://cdn.shopify.com/s/files/1/0455/4224/4511/products/AMALAKI.jpg?v=1600114241",123, 10);
+
+let producto1 = new Product("Te meishen limón", " te", 29000,"https://cdn.shopify.com/s/files/1/0455/4224/4511/products/Te-Meishen-tarro.jpg?v=1600114638", 124, 11);
+
+let producto2 = new Product("Levadura de cerveza", "vitamina", 40000,"https://cdn.shopify.com/s/files/1/0455/4224/4511/products/LEVADURA-CERVEZA100.jpg?v=1600114457", 125, 12);
+
+let producto3 = new Product("Echinacea", "vitamina", 60000, "https://cdn.shopify.com/s/files/1/0455/4224/4511/products/ECHINACEA.jpg?v=1600114354", 126, 13);
+
+let producto4 = new Product("Biotin", "te", 61000, "https://cdn.shopify.com/s/files/1/0455/4224/4511/products/BIOTIN-COLLAGEN.jpg?v=1600114276", 127, 14);
+
+let producto5 = new Product("Clorofila purrcell", "vitamina", 20850, "https://cdn.shopify.com/s/files/1/0455/4224/4511/products/A397.jpg?v=1622465157", 128, 15);
+
+let producto6 = new Product(" Te Formad", "te", 18400, "https://cdn.shopify.com/s/files/1/0455/4224/4511/products/TE-FORMA-LIGHT.jpg?v=1600114639", 129, 16);
+
+let producto7 = new Product("Vitacer", "vitamina", 70000, "https://cdn.shopify.com/s/files/1/0455/4224/4511/products/A796.png?v=1600114711", 130, 17);
+
+let producto8 = new Product("Garcinia", "vitamina", 50000, "https://cdn.shopify.com/s/files/1/0455/4224/4511/products/GARCINIA.jpg?v=1600114395", 131, 18);
+
+let producto9 = new Product("Te relaxnat", "te", 14800, "https://cdn.shopify.com/s/files/1/0455/4224/4511/products/TE-RELAXNAT.jpg?v=1600114639", 132, 19);
+
 
 // 1
 
-// persona1.addProduct(producto0);
-// persona1.addProduct(producto1);
-// persona1.addProduct(producto2);
-// persona1.addProduct(producto3);
+// productList.addProduct(producto0);
+// productList.addProduct(producto1);
+// productList.addProduct(producto2);
+// productList.addProduct(producto4);
+// productList.addProduct(producto5);
+// productList.addProduct(producto6);
+// productList.addProduct(producto7);
+// productList.addProduct(producto8);
+// productList.addProduct(producto9);
+
 
 //2
 // error ya existe el code
@@ -106,7 +129,7 @@ let producto3 = new Product("zapato", "blancas", 50000, "img", 1, 3);
 
 // 3
 // Mostrar productos
-// console.log(persona1.getProduct());
+// console.log(productList.getProduct());
 
 //4
 // Buscar producto
@@ -127,3 +150,6 @@ let producto3 = new Product("zapato", "blancas", 50000, "img", 1, 3);
 //     code: 124,
 //     stock: 19456
 // })
+module.exports = {
+  ProductManager: productList
+}
