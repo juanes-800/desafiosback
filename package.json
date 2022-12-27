@@ -1,8 +1,8 @@
 {
-  "name": "desafiosback",
+  "name": "desafio4",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "aprendiendo express",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,10 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/juanes-800/desafiosback.git"
   },
-  "author": "",
+  "author": "juan esteban",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/juanes-800/desafiosback/issues"
   },
-  "homepage": "https://github.com/juanes-800/desafiosback#readme"
+  "homepage": "https://github.com/juanes-800/desafiosback#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
